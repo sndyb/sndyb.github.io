@@ -116,8 +116,8 @@ ion-icon { pointer-events: none; }
 
 html {
   font-family: var(--ff-syne);
-  font-size: 10px;
-  scroll-behavior: smooth;
+  font-size: 9px;
+  scroll-behavior:smooth;
 }
 
 body {
@@ -168,7 +168,7 @@ body.nav-active { overflow: hidden; }
 .section { padding-block: var(--section-padding); }
 
 .h1 {
-  font-size: var(--fs-3);
+  font-size: var(--fs-4);
   font-weight: var(--fw-800);
 }
 
@@ -179,7 +179,8 @@ body.nav-active { overflow: hidden; }
   line-height: 1;
 }
 
-.h2 { font-size: var(--fs-2); color: var(--raisin-black);}
+.h2 { font-size: var(--fs-1); color: var(--raisin-black);}
+
 .h3 {
   color: var(--white);
   font-size: var(--fs-4);
@@ -248,13 +249,20 @@ body.nav-active { overflow: hidden; }
 
 .section-subtitle {
   text-transform: uppercase;
-  font-size: var(--fs-8);
+  font-size: var(--fs-9);
   font-weight: var(--fw-700);
   margin-block-end: 20px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
-.section-title { margin-block-end: 45px; }
+.section-title { 
+  margin-block-end: 39px; 
+  font-size: 42px;
+  text-align: center;
+  position: relative;
+  align-items: center;
+}
 
 .text-lg {
   font-family: var(--ff-syne);
@@ -523,7 +531,7 @@ body.nav-active { overflow: hidden; }
 
 
 
-.hero-subtitle {
+.subtitle {
   font-size: var(--fs-8);
   text-transform: uppercase;
   font-weight: var(--fw-700);
@@ -628,7 +636,7 @@ body.nav-active { overflow: hidden; }
   #SKILLS
 \*-----------------------------------*/
 
-.skills .section-text { margin-block-end: 20px; }
+.skills .section-text { margin-block-end: 30px; }
 
 .skills  { margin-block: 45px; }
 
@@ -670,27 +678,28 @@ body.nav-active { overflow: hidden; }
   background-color: transparent;
   transition: var(--cubic-ease-out);
   border-radius: 30px;
-  max-width: 360px; /* Atur lebar maksimum card */
-  margin: 0 auto; 
+  max-width: 387px; /* Atur lebar maksimum card */
+  margin: 20px; 
 }
 
 .portfolio-card .img-cover { transition: var(--cubic-ease-out); border-radius: 30px;}
 
 .portfolio-card .card-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  left:46%;
   text-align: center;
   width: 100%;
-  transform: translate(-55%, -50%);
+  transform: translate(-50%, 50%);
   opacity: 0;
   transition: var(--cubic-ease-out);
   z-index: 1;
   border-radius: 20px;
+  margin: 20px;
 }
 
 .portfolio-card .card-text { color: var(--raisin-black); 
-border-radius: 20px;}
+}
 
 .portfolio-card:is(:hover, :focus-within) .img-cover {
   opacity: 0.1;
@@ -698,7 +707,7 @@ border-radius: 20px;}
 }
 
 .portfolio-card:is(:hover, :focus-within) .card-content {
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 055%);
   opacity: 1;
 }
 
@@ -854,46 +863,59 @@ footer p{
   font-size: 1.1em;
 }
 /* Desktop Layout */
-@media (min-width: 768px) {
-  .hero-title,
-  .hero-subtitle,
-  .typing-text,
-  .download-btn,
-  .btn-container,
-  .footer-teks {
-    text-align: right;
-    justify-content: flex-end;
-  }
-  .hero-banner {
-    position: absolute;
-    top: 44%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 46%;
-    z-index: -1;
-  }
-  .hero-title {
-    text-transform: uppercase;
-    word-break: break-all;
-    
-  }
-  .typing-text {
-    font-size: 18px;
-    color: var(--raisin-black);
-  }
-}
-
-/* Mobile Layout */
-@media (max-width: 767px) {
+@media only screen and (min-width: 768px)  {
   .hero-content {
     text-align: right;
     font-size: 10px;
+    top: 200px;
   }
   .hero-title {
-    text-transform: uppercase;
-    word-break: break-all;
-    font-size: 40px;
+    font-size: 70px;
+    color: var(--raisin-black);
+    margin-top: 3px;
+    bottom: 80px;
+    position: relative;
   }
+  .subtitle {
+    margin-top: 40px;
+    bottom: 100px;
+    position: relative;
+    text-align: right;
+    left: 20pxpx;
+    
+  }
+  .section-title { 
+    margin-block-end: 39px; 
+    font-size: 42px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    left: 250px;
+  }
+  .project {
+    text-transform: uppercase;
+    font-size: var(--fs-9);
+    font-weight: var(--fw-700);
+    margin-block-end: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .centered-text {
+    text-align: center;
+    margin: 0 auto; /* Center block element horizontally */
+    max-width: 800px; /* Optional: limit the width */
+  }
+  
+  .skills-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-text {
+    font-size: 16px; /* Adjust as needed */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
+  
   .download-btn {
     color: var(--black);
     text-align: right;
@@ -906,32 +928,434 @@ footer p{
     line-height: 1.5em;
     margin-block: 0px;
     padding: 10px 20px; /* Sesuaikan dengan kebutuhan Anda */
-    margin-right: 10px;
+    margin-right: 6px;
+    margin-left: auto; /* Align to the right */
+    margin-top: 10px;
+    position: relative;
+    bottom: 80px;
+  
+  }
+  .garis {
+    position:absolute;
+    right: -30px;
+    transform: translateY(-50%);
+    width: 80%;
+    margin-top: 0px;
+    align-items:right;
+    margin-bottom: 0px;
+    margin: 0px;
+    top: 130px;
+    display: none;
+  }
+  .hero-banner {
+    position:absolute;
+    left: 49px;
+    transform: translateY(-50%);
+    width: 35%;
+    z-index: -1;
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 0px;
+    margin: 0px;
+    top: 340px;
+  }
+  .kebawah {
+    width:1275px;
+    position: absolute;
+    top: 360px;
+    bottom: 90px;
+    left: 0px;
+    scale: 100%;
+    align-items: center;
+  }
+  .jam {
+    align-items: center;
+    position: relative;
+    text-align: center;
+    top: 50px;
+    bottom: 18px;
+    font-size: 37px;
+  }
+  .tanggal {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    top: 50px;
+  }
+  .typing-text {
+    font-size: 20px;
+    color: var(--raisin-black);
+    margin-top: 10px;
+    position: relative;
+    bottom: 90px;
+  }
+  .subtitle {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .portfolio-label {
+    text-align: center;
+    align-items: center;
+  }
+/* Kontainer untuk skills */
+.skills-images-container {
+  display: flex;
+  flex-wrap: wrap; /* Membuat elemen gambar membungkus ke baris berikutnya jika perlu */
+  justify-content: space-around; /* Membuat elemen tersebar secara rata */
+  gap: 20px; /* Jarak antar elemen gambar */
+  padding: 20px; /* Padding di sekitar kontainer */
+}
+
+/* Setiap elemen skill-item */
+.skill-item {
+  flex: 1 1 150px; /* Elemen fleksibel yang menyesuaikan ukuran (min 150px) */
+  display: flex;
+  justify-content: center; /* Mengatur gambar di tengah horizontal */
+  align-items: center; /* Mengatur gambar di tengah vertikal */
+}
+
+/* Setel ukuran gambar agar responsif */
+.skill-image {
+  max-width: 100px; /* Maksimum lebar gambar */
+  height: auto; /* Tinggi gambar otomatis menyesuaikan proporsi */
+}
+
+/* Media query untuk menyesuaikan tampilan di desktop */
+@media (min-width: 768px) {
+  .skills-images-container {
+    justify-content: space-evenly; /* Pada layar yang lebih besar, distribusikan gambar secara merata */
+  }
+}
+
+}
+.bulat {
+  position:relative;
+  left: 240px;
+  transform: translateY(-50%);
+  width: 50%;
+  z-index: -1;
+  margin-top: 0px;
+  align-items: center;
+  margin-bottom: 0px;
+ top:295px;
+ gap: 0px;
+}
+.ps {
+  width: 1000px;
+  position: relative;
+  scale: 100%;
+  height: 100px;
+  
+}
+
+
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-2: 6rem;
+    --fs-3: 5.5rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container { max-width: 720px; }
+
+  .title-wrapper {
+    display: flex;
+    gap: 10%;
+  }
+
+  .title-wrapper .section-title { 
+    margin-block-end: 100; 
+    text-align: center;
+  }
+
+  .title-wrapper .section-text { 
+    margin-block-start: 40px; 
+    color: var(--raisin-black); 
+    text-align: center;
+  }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero .container { position: relative; }
+
+  
+
+  .hero-content {
+    width: 100%;
+    margin-inline-start: auto;
+    padding-block: 10%;
+  }
+
+  .hero-title,
+  .subtitle { text-shadow: 0px 2px 0 var(--eerie-black); }
+
+
+
+/* Container untuk bagian Skills dan Portfolio */
+
+
+
+  /**
+   * BLOG
+   */
+
+  .blog-card .card-title { --fs-4: 2.7rem; }
+  .ps {
+    width:0px;
+    margin-left: 30px;
+    bottom: -160px;
+    position: relative;
+  }
+  .flutter {
+    width:0px;
+    margin-left: 110px;
+    bottom: -90px;
+    position: relative;
+  }
+  .laravel {
+    width:0px;
+    margin-left: 210px;
+    bottom: -20px;
+    position: relative;
+  }
+  .js {
+    width:0px;
+    margin-left: 300px;
+    bottom: 50px;
+    position: relative;
+  }
+
+  .ae {
+    width:0px;
+    margin-left: 295px;
+    bottom: 35px;
+    position: relative;
+  }
+
+  .vsc {
+    width:0px;
+    margin-left: 210px;
+    bottom: 110px;
+    position: relative;
+  }
+
+  .github {
+    width:0px;
+    left: 90px;
+    bottom: 179px;
+    position: relative;
+  }
+
+  .nodejs {
+    width:300px;
+    margin-left: 20px;
+    bottom: 250px;
+    position: relative;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer .container { grid-template-columns: repeat(3, 1fr); }
+
+
+
+/**
+* QUOTES  */
+* 
+
+.header {
+text-align: center;
+margin-bottom: 50px;
+}
+.quote  {
+  text-align: center;
+  color: #00ffab;
+  bottom: 60px;
+  position: relative;
+}
+
+.writer {
+  text-align: center;
+  color:#00ffab;
+  position: relative;
+  bottom: 60px;
+}
+
+.borderquotes {
+  position:relative;
+  width: 470px;
+  top: 150px;
+  column-gap: normal;
+}
+
+
+/* Mobile Layout */
+@media only screen and (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+    font-size: 10px;
+    top: 200px;
+  }
+  .hero-title {
+    font-size: 33px;
+    color: var(--raisin-black);
+    margin-top: 300px;
+  }
+  .subtitle {
+    margin-top: 40px;
+  }
+  .garis {
+    position:absolute;
+    left: 35px;
+    transform: translateY(-50%);
+    width: 82%;
+    z-index: -1;
+    margin-top: 0px;
+    align-items: center;
+    margin-bottom: 0px;
+    margin: 0px;
+    top: 202px;
+  }
+/* Kontainer untuk skills */
+.skills-images-container {
+  display: flex;
+  flex-wrap: wrap; /* Membuat elemen gambar membungkus ke baris berikutnya jika perlu */
+  justify-content: space-around; /* Membuat elemen tersebar secara rata */
+  gap: 20px; /* Jarak antar elemen gambar */
+  padding: 20px; /* Padding di sekitar kontainer */
+}
+
+/* Setiap elemen skill-item */
+.skill-item {
+  flex: 1 1 150px; /* Elemen fleksibel yang menyesuaikan ukuran (min 150px) */
+  display: flex;
+  justify-content: center; /* Mengatur gambar di tengah horizontal */
+  align-items: center; /* Mengatur gambar di tengah vertikal */
+}
+
+/* Setel ukuran gambar agar responsif */
+.skill-image {
+  max-width: 100px; /* Maksimum lebar gambar */
+  height: auto; /* Tinggi gambar otomatis menyesuaikan proporsi */
+}
+
+/* Media query untuk menyesuaikan tampilan di desktop */
+@media (min-width: 768px) {
+  .skills-images-container {
+    justify-content: space-evenly; /* Pada layar yang lebih besar, distribusikan gambar secara merata */
+  }
+}
+
+  .download-btn {
+    color: var(--black);
+    text-align: center;
+    background-color: var(--raisin-black);
+    border-radius: 90px;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    letter-spacing: 0px;
+    line-height: 1.5em;
+    margin-block: 0px;
+    padding: 10px 20px; /* Sesuaikan dengan kebutuhan Anda */
+    margin-right: 139px;
     margin-left: auto; /* Align to the right */
     margin-top: 10px;
   
   }
   .hero-banner {
-    position: absolute;
-    top: 47%;
-    left: 10px;
+    position:absolute;
+    left: 49px;
     transform: translateY(-50%);
-    width: 59%;
+    width: 80%;
     z-index: -1;
-    margin-top: 10px;
+    margin-top: 0px;
+    align-items: center;
+    margin-bottom: 0px;
+    margin: 0px;
+    top: 300px;
   }
 
-
+  .centered-text {
+    text-align: center;
+    margin: 0 auto; /* Center block element horizontally */
+    max-width: 800px; /* Optional: limit the width */
+  }
+  
+  .skills-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-text {
+    font-size: 16px; /* Adjust as needed */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
+  
+  .jam {
+    align-items: center;
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+  }
+  .tanggal {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    bottom: 10px;
+  }
   .typing-text {
     font-size: 10px;
     color: var(--raisin-black);
     margin-top: 10px;
   }
-  .hero-subtitle {
+  .subtitle {
     margin-bottom: 10px;
-    font-size: 8px;
+    font-size: 10px;
+    text-align: center;
+  }
+  .portfolio-label {
+    text-align: center;
+    align-items: center;
+  }
+  .bulat {
+    position: absolute;
+    top: 370px;
+    align-items: center;
+    scale: 100%;
+    width: 80%;
+    left: 37px;
+  
+  }
+  .kebawah {
+    display: none;
   }
 }
+
+
+
 
 
   /**
@@ -964,7 +1388,11 @@ footer p{
 
   .title-wrapper .section-title { margin-block-end: 0; }
 
-  .title-wrapper .section-text { margin-block-start: 40px; color: var(--raisin-black); }
+  .title-wrapper .section-text { 
+    margin-block-start: 40px; 
+    color: var(--raisin-black); 
+    text-align: center;
+  }
 
 
 
@@ -977,42 +1405,77 @@ footer p{
   
 
   .hero-content {
-    width: 50%;
+    width: 100%;
     margin-inline-start: auto;
     padding-block: 10%;
   }
 
   .hero-title,
-  .hero-subtitle { text-shadow: 2px 2px 0 var(--eerie-black); }
+  .subtitle { text-shadow: 0px 2px 0 var(--eerie-black); }
 
 
-
-  /**
-   * SKILL
-   */
-
-  .skills-wrapper {
-    display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    gap: 40px;
-  }
-
-  .skills .btn { margin-block-end: 0; }
 
 /* Container untuk bagian Skills dan Portfolio */
-.skills-portfolio-container {
-  display: flex;
-  flex-direction: column;
-  gap: 50px; /* Jarak antara bagian Skills dan Portfolio */
-}
+
+
 
   /**
    * BLOG
    */
 
   .blog-card .card-title { --fs-4: 2.7rem; }
+  .ps {
+    width:0px;
+    margin-left: 30px;
+    bottom: -160px;
+    position: relative;
+  }
+  .flutter {
+    width:0px;
+    margin-left: 110px;
+    bottom: -90px;
+    position: relative;
+  }
+  .laravel {
+    width:0px;
+    margin-left: 210px;
+    bottom: -20px;
+    position: relative;
+  }
+  .js {
+    width:0px;
+    margin-left: 300px;
+    bottom: 50px;
+    position: relative;
+  }
 
+  .ae {
+    width:0px;
+    margin-left: 295px;
+    bottom: 35px;
+    position: relative;
+  }
 
+  .vsc {
+    width:0px;
+    margin-left: 210px;
+    bottom: 110px;
+    position: relative;
+  }
+
+  .github {
+    width:0px;
+    left: 90px;
+    bottom: 179px;
+    position: relative;
+  }
+
+  .nodejs {
+    width:300px;
+    margin-left: 20px;
+    bottom: 250px;
+    position: relative;
+  }
 
   /**
    * FOOTER
@@ -1022,9 +1485,34 @@ footer p{
 
 
 
+/**
+* QUOTES  */
+* 
 
+.header {
+text-align: center;
+margin-bottom: 50px;
+}
+.quote  {
+  text-align: center;
+  color: #00ffab;
+  bottom: -20px;
+  position: relative;
+}
 
+.writer {
+  text-align: center;
+  color:#00ffab;
+  position: relative;
+  bottom: -20px;
+}
 
+.borderquotes {
+  position:relative;
+  width: 470px;
+  top: 150px;
+  column-gap: normal;
+}
 
 /**
  * responsive for large than 992px screen
@@ -1064,7 +1552,7 @@ footer p{
    * HERO
    */
 
-  .hero-subtitle { --fs-8: 1.4rem; }
+  .subtitle { --fs-8: 1.4rem; }
 
 
 
@@ -1072,7 +1560,9 @@ footer p{
    * SKILL
    */
 
-  .skills .section-title { max-width: 16ch; }
+  .skills .section-title { 
+    max-width: 19ch; 
+  text-align: center;}
 
   .skills-wrapper { gap: 10%; }
 
