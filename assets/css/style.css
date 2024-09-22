@@ -1,18 +1,3 @@
-/*-----------------------------------*\
-  #main.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -863,34 +848,52 @@ footer p{
   font-size: 1.1em;
 }
 /* Desktop Layout */
-@media only screen and (min-width: 768px)  {
+@media only screen and (min-width: 768px){
   .hero-content {
     text-align: right;
-    font-size: 10px;
-    top: 200px;
+    font-size: 100px;
+    position: relative;
+   
   }
   .hero-title {
-    font-size: 70px;
+    font-size: var(--fs-0);
     color: var(--raisin-black);
     margin-top: 3px;
-    bottom: 80px;
+  bottom: 110px;
     position: relative;
+    scale: 70%;
+    left: 140px;
   }
+  .download-btn {
+    color: var(--black);
+    text-align: center;
+    background-color: var(--raisin-black);
+    border-radius: 90px;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    letter-spacing: 0px;
+    line-height: 1.5em;
+    position: static;
+    display: flex;
+  }
+ 
   .subtitle {
     margin-top: 40px;
     bottom: 100px;
     position: relative;
     text-align: right;
-    left: 20pxpx;
+    left: 20px;
+    margin-left: 200px;
     
   }
   .section-title { 
-    margin-block-end: 39px; 
+     position: relative;
     font-size: 42px;
     text-align: center;
-    position: relative;
     align-items: center;
-    left: 250px;
+    margin : 0 auto;
+    justify-content: center;
   }
   .project {
     text-transform: uppercase;
@@ -914,6 +917,7 @@ footer p{
   .section-text {
     font-size: 16px; /* Adjust as needed */
     line-height: 1.5; /* Adjust line height for readability */
+    margin-top: 50px;
   }
   
   .download-btn {
@@ -953,20 +957,24 @@ footer p{
     transform: translateY(-50%);
     width: 35%;
     z-index: -1;
-    margin-top: 30px;
-    align-items: center;
-    margin-bottom: 0px;
-    margin: 0px;
-    top: 340px;
+    align-items: left;
+    top: 300px;
+    display: inline;
+    scale: 90%;
+  
+   
   }
   .kebawah {
-    width:1275px;
-    position: absolute;
+    display: none;
+    width:100%;
+    height: fit-content;
+    position:relative;
     top: 360px;
     bottom: 90px;
     left: 0px;
     scale: 100%;
     align-items: center;
+    justify-content: center;
   }
   .jam {
     align-items: center;
@@ -1022,9 +1030,9 @@ footer p{
 }
 
 /* Media query untuk menyesuaikan tampilan di desktop */
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .skills-images-container {
-    justify-content: space-evenly; /* Pada layar yang lebih besar, distribusikan gambar secara merata */
+    justify-content:space-evenly; /* Pada layar yang lebih besar, distribusikan gambar secara merata */
   }
 }
 
@@ -1040,6 +1048,7 @@ footer p{
   margin-bottom: 0px;
  top:295px;
  gap: 0px;
+ display: none;
 }
 .ps {
   width: 1000px;
@@ -1180,11 +1189,6 @@ footer p{
   .footer .container { grid-template-columns: repeat(3, 1fr); }
 
 
-
-/**
-* QUOTES  */
-* 
-
 .header {
 text-align: center;
 margin-bottom: 50px;
@@ -1212,32 +1216,44 @@ margin-bottom: 50px;
 
 
 /* Mobile Layout */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px)  {
   .hero-content {
     text-align: center;
     font-size: 10px;
     top: 200px;
   }
   .hero-title {
-    font-size: 33px;
+    font-size:var(--fs-1);
     color: var(--raisin-black);
-    margin-top: 300px;
+    margin-top: 270px;
+    position:static;
+    display:flexbox;
   }
   .subtitle {
     margin-top: 40px;
+    position: static;
   }
   .garis {
     position:absolute;
-    left: 35px;
+    left: 0px;
     transform: translateY(-50%);
-    width: 82%;
-    z-index: -1;
+    width: 100%;
     margin-top: 0px;
     align-items: center;
     margin-bottom: 0px;
     margin: 0px;
-    top: 202px;
+    top: 215px;
+    display:grid;
+    justify-content: center;
+    justify-items: center;
   }
+  .typing-text {
+    font-size: 10px;
+    color: var(--raisin-black);
+    margin-top: 10px;
+    position: static;
+  }
+
 /* Kontainer untuk skills */
 .skills-images-container {
   display: flex;
@@ -1261,41 +1277,27 @@ margin-bottom: 50px;
   height: auto; /* Tinggi gambar otomatis menyesuaikan proporsi */
 }
 
-/* Media query untuk menyesuaikan tampilan di desktop */
-@media (min-width: 768px) {
-  .skills-images-container {
-    justify-content: space-evenly; /* Pada layar yang lebih besar, distribusikan gambar secara merata */
-  }
-}
-
   .download-btn {
-    color: var(--black);
-    text-align: center;
-    background-color: var(--raisin-black);
-    border-radius: 90px;
-    font-size: 9px;
-    text-transform: uppercase;
-    font-weight: var(--fw-700);
-    letter-spacing: 0px;
-    line-height: 1.5em;
-    margin-block: 0px;
-    padding: 10px 20px; /* Sesuaikan dengan kebutuhan Anda */
-    margin-right: 139px;
-    margin-left: auto; /* Align to the right */
-    margin-top: 10px;
-  
+   position: static;
+   display: inline;
+    justify-content: center;
+    justify-items: center;
   }
   .hero-banner {
-    position:absolute;
-    left: 49px;
+  display: flex;
+  justify-content: center;
     transform: translateY(-50%);
-    width: 80%;
+    width: 70%;
     z-index: -1;
     margin-top: 0px;
     align-items: center;
     margin-bottom: 0px;
     margin: 0px;
     top: 300px;
+    left: 60px;
+  
+   
+  position: absolute;
   }
 
   .centered-text {
@@ -1308,6 +1310,13 @@ margin-bottom: 50px;
     justify-content: center;
     align-items: center;
   }
+  .section-title { 
+    margin-block-end: 39px; 
+    font-size: 42px;
+    text-align: center;
+    position: static;
+    align-items: center;
+  }
   
   .section-text {
     font-size: 16px; /* Adjust as needed */
@@ -1316,15 +1325,17 @@ margin-bottom: 50px;
   
   .jam {
     align-items: center;
-    position: relative;
+    position: static;
     text-align: center;
-    bottom: 20px;
+    bottom: 90px;
+    font-size: 20px;
+    top: 90px;
   }
   .tanggal {
     text-align: center;
-    position: relative;
+    position: static;
     align-items: center;
-    bottom: 10px;
+    bottom: 90px;
   }
   .typing-text {
     font-size: 10px;
@@ -1341,12 +1352,15 @@ margin-bottom: 50px;
     align-items: center;
   }
   .bulat {
-    position: absolute;
+    position: static;
     top: 370px;
     align-items: center;
     scale: 100%;
     width: 80%;
-    left: 37px;
+    margin-left: 37px;
+    margin-top: 150px;
+    display:none;
+
   
   }
   .kebawah {
@@ -1354,6 +1368,58 @@ margin-bottom: 50px;
   }
 }
 
+.ps {
+  width:0px;
+  margin-left: 30px;
+  bottom: -160px;
+  position: relative;
+}
+.flutter {
+  width:0px;
+  margin-left: 110px;
+  bottom: -90px;
+  position: relative;
+}
+.laravel {
+  width:0px;
+  margin-left: 210px;
+  bottom: -20px;
+  position: static;
+}
+.js {
+  width:0px;
+  margin-left: 300px;
+  bottom: 50px;
+  position: relative;
+}
+
+.ae {
+  width:0px;
+  margin-left: 295px;
+  bottom: 35px;
+  position: relative;
+}
+
+.vsc {
+  width:0px;
+  margin-left: 210px;
+  bottom: 110px;
+  position: relative;
+}
+
+.github {
+  width:0px;
+  left: 90px;
+  bottom: 179px;
+  position: relative;
+}
+
+.nodejs {
+  width:300px;
+  margin-left: 20px;
+  bottom: 250px;
+  position: relative;
+}
 
 
 
